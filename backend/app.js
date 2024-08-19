@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/MarkItDown").then(() => {
+mongoose.connect("mongodb+srv://admin:India%40123@100xdev.7gly1js.mongodb.net/markitdown").then(() => {
   console.log("Database connected");
 });
 
