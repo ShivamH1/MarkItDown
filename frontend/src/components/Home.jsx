@@ -11,21 +11,21 @@ function Home() {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/todos")
+      .get("https://mark-it-down-server.vercel.app/todos")
       .then((res) => setTodos(res.data))
       .catch((err) => console.error(err));
   });
 
   const handleEdit = (id) => {
     axios
-      .put("http://localhost:8080/update/" + id)
+      .put("https://mark-it-down-server.vercel.app/update/" + id)
       .then((res) => location.reload())
       .catch((err) => console.log(err));
   };
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8080/delete/" + id)
+      .delete("https://mark-it-down-server.vercel.app/delete/" + id)
       .then((res) => location.reload())
       .catch((err) => console.log(err));
   }

@@ -6,7 +6,7 @@ function CreateTodo() {
 
   const handleAdd = () => {
     axios
-      .post("http://localhost:8080/add", {
+      .post("https://mark-it-down-server.vercel.app/add", {
         task: task,
       })
       .then((res) => location.reload())
